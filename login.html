@@ -1,0 +1,99 @@
+<!doctype html> 
+
+<html lang="en">
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <title>SignUP page</title>
+
+    <link href="login.css" rel="stylesheet">
+
+    <script>
+        function lo() {
+  var username = document.getElementById("username");
+  var password1 = document.getElementById("password1");
+  var password2 = document.getElementById("password2");
+  // var error = document.getElementById("error");
+
+  if(username.value==null || username.value==""){
+    alert("Plz Enter your details");
+
+      return false;
+
+  }
+   else if(password1.value === password2.value){
+     if(confirm("Do you want to Submit ")) 
+       return true;
+       else return false;
+   }
+  else {
+    alert("Enter Correct Password");
+    return false;
+  }
+}
+
+
+    </script>
+
+  </head>
+
+  <body class="text-center">
+
+    <main class="form-signin">
+      
+      <form  action="login.php" method="POST" onsubmit="return lo()" >
+
+
+        <img class="mb-4" src="login_image.jpg" alt="" height="200" width="200">
+
+        <h1 class="h3 mb-3 fw-normal"><b>Book shop</b> - SignUp</h1>
+
+
+        <div class="form-floating">
+          <input type="text" class="form-control" name="Name" id="name" placeholder="Name">
+          <label for="floatingInput">Name</label><br>
+        </div>
+    
+        
+        <div class="form-floating">
+          <input type="email" class="form-control" id="username" name="Email_Address" placeholder="email">
+          <label for="floatingInput">Email address</label><br>
+          <p id="hello"></p>
+        </div>
+
+
+
+        <div class="form-floating">
+          <input type="password" class="form-control" id="password1" name="Password" placeholder="Password">
+          <label for="floatingPassword">Password</label><br>
+        </div>
+
+
+
+        <div class="form-floating">
+          <input type="password" class="form-control" id="password2" placeholder="Confirm-Password">
+          <label for="floatingPassword"> confirm-password</label><br>
+        </div>
+
+        <div>
+          <input class="w-100 btn btn-lg btn-primary mt-3" type="submit">
+
+          <p class="mt-5 mb-3"><a href="login1.php">LOGIN</a></p>
+
+          <p class="mt-5 mb-3"><a href="index.html">GO TO HOME</a></p>
+        </div>
+
+      </form>
+
+    </main>
+
+    <script src="login.js"></script>  
+
+  </body>
+</html> 

@@ -21,7 +21,7 @@ if(mysqli_query($con,$sql)){
 // echo "done";
 
 echo '<div class="alert alert-warning alert-dismissible fade show" role="alert">
-<strong>Data Inserted!</strong> Now you can login
+<strong>Data Inserted!</strong> You Register Successfully...
 </div>';
 include "login1.php";
 }
